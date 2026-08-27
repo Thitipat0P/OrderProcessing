@@ -9,7 +9,7 @@ public class FixedDiscount implements DiscountStrategy {
 
     @Override public double applyDiscount(Order order) {
         // TODO (2b): คืน (ราคารวม - amount) แต่ต้องไม่ต่ำกว่า 0
-        //   hint: Math.max(order.getTotalPrice() - amount, 0)
-        return /* ====== replace this ====== */ order.getTotalPrice();
+        //   hint: Math.max(order.getTotalPrice() - amount, 0
+        return Math.max(order.getTotalPrice() - amount, 0);
     }
 }

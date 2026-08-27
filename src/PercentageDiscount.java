@@ -7,11 +7,12 @@ public class PercentageDiscount implements DiscountStrategy {
             throw new IllegalArgumentException("percent must be 0-100");
         this.percent = percent;
     }
-
+    
     @Override public double applyDiscount(Order order) {
         double total = order.getTotalPrice();
         // TODO (2a): คืนราคาหลังหักส่วนลด percent%
         //   hint: total - (total * percent / 100.0)
-        return /* ====== replace this ====== */ total;
+        total = total - (total * percent / 100.0);
+        return total;
     }
 }
